@@ -25,7 +25,7 @@ public class MenuController {
         int option;
         do {
             consoleView.displayMenu();
-            String input = consoleView.getInput("Seleccione una opcion: ");
+            String input = consoleView.getInput("");
             option = Integer.parseInt(input);
 
             switch (option) {
