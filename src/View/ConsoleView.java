@@ -6,11 +6,11 @@ public class ConsoleView {
     private Scanner scanner;
 
     public ConsoleView() {
-        scanner = new Scanner(System.in);
+        this.scanner = new Scanner(System.in);
     }
 
     public void displayMenu() {
-        System.out.println("\n--- Menú de Gestión de Contactos ---");
+        System.out.println("\n--- Menu de la Agenda de Contactos ---");
         System.out.println("1. Añadir contacto");
         System.out.println("2. Buscar contacto");
         System.out.println("3. Eliminar contacto");

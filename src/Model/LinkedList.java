@@ -1,43 +1,45 @@
 package Model;
 
-public class LinkedList <T>{
+public class LinkedList<T> {
     private Node<T> head;
     private Node<T> tail;
     private int size;
+
     public LinkedList() {
         this.head = null;
         this.tail = null;
         this.size = 0;
     }
+
     public void appendToTail(T value) {
         Node<T> newNode = new Node<>(value);
         if (head == null) {
             head = newNode;
             tail = newNode;
-            return;
-        }else{
+        } else {
             tail.setNext(newNode);
             tail = newNode;
         }
-        size ++;
+        size++;
     }
 
-    public T findByValue(T value){
+    public T findByValue(T value) {
         Node<T> current = head;
-        while(current.getNext() != null){
-            if(current.getValue().equals(value)){
+        while (current != null) { 
+            if (current.getValue().equals(value)) {
                 return current.getValue();
             }
+            current = current.getNext();
         }
         return null;
     }
 
     public void deleteByValue(T value) {
-        if (head == null)
-            return;
+        if (head == null) return;
 
         if (head.getValue().equals(value)) {
             head = head.getNext();
+            if (head == null) tail = null; 
             size--;
             return;
         }
@@ -58,17 +60,16 @@ public class LinkedList <T>{
 
     public void print() {
         if (head == null) {
-            System.out.println("END");
+            System.out.println("Lista vacía.");
             return;
         }
         Node<T> current = head;
-        while (current.getNext() != null) {
-            System.out.print(current.getValue() + " -> ");
+        while (current != null) {
+            System.out.println(current.getValue());
             current = current.getNext();
         }
-        System.out.println(current.getValue() + " -> END");
     }
-    
+
     public int getSize() {
         return size;
     }
