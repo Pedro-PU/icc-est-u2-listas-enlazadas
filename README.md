@@ -16,7 +16,7 @@
 
 - Crear una clase llamada Contacto que contenga dos atributos: nombre y teléfono. Ambos deben ser definidos usando tipos genéricos, de modo que se pueda utilizar cualquier tipo de dato al instanciarlos.
 
-- Diseñar una clase Agenda que emplee una estructura de datos tipo ListaEnlazada para guardar los contactos. Esta clase debe incluir métodos que permitan agregar un contacto nuevo, buscar un contacto por su nombre y eliminar un contacto existente.
+- Diseñar una clase ContactManager (Agenda) que emplee una estructura de datos tipo ListaEnlazada para guardar los contactos. Esta clase debe incluir métodos que permitan agregar un contacto nuevo, buscar un contacto por su nombre y eliminar un contacto existente.
 
 - Adicional: El programa debe presentar un menú interactivo con las opciones disponibles: agregar, buscar, eliminar y listar contactos. Debe mantenerse en ejecución hasta que el usuario elija salir.
 
